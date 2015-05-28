@@ -1,84 +1,127 @@
 <html>
 	<head>
 		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../static/bootstrap.min.css">
 
 		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="../static/bootstrap-theme.min.css">
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	
-		<style>
-
-		.logo {
-		  color:#fff;
-		  font-weight:800;
-		  font-size:14pt;
-		  padding:25px;
-		  text-align:center;
-		}
-
-		.line {
-		  padding-top:20px;
-		  white-space:no-wrap;
-		  overflow:hidden;
-		  text-align:center;
-		}
-		</style>
+		<link rel="stylesheet" href="../static/style.css">
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
 	
 	</head>
 	
 	<body>
-		
-		<div class='wide' style='text-align:center;'>
-			<img src="http://dmiller89.webfactional.com/django_static/challenge/images/logo.png" style="max-width: 100%;max-height: 150px;margin: 0px auto;">
+	
+		<div class="navbar navbar-inverse navbar-fixed-top affix-top" id="navbar">
+		  <div class="navbar-inner">
+			<div class="container">
+			  <div class="row">
+				<div class="col-md-12">
+				  <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+				  <a href="#none" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="fa fa-bars"></span>
+					<span class="btn-navbar-text">Menu</span>
+				  </a>
+				  <a class="brand" href="/"><span class="logo"></span></a>
+				  <div class="navbar-collapse">
+					<div class="nav-menu pull-left">
+					  <ul class="nav nav-pills">
+
+					  </ul>
+					</div><!-- end nav-menu -->
+					<div class="nav-user pull-right">
+					  <ul class="nav nav-user-options">
+						<li class="signup"><a href="" class="btn btn-success">Log In</a></li>
+						<li class="signup"><a href="" class="btn btn-orange">Sign Up</a></li>
+					  </ul>
+					</div><!-- end nav-user -->
+				  </div>
+				</div><!-- end col-md-12 -->
+			  </div><!-- end row fluid -->
+			</div><!-- end container -->
+		  </div><!-- end navbar-inner -->
 		</div>
-			
+	
+	
+	
+		<div class="container-wrapper container-top container-wrapper-home carousel slide">
+	      	<div class="carousel-inner">
+	        	<div class="item active">
+		          	<div class="container">
+		            	<div class="carousel-caption">
+		              		<div class="row">
+		                		<div class="col-md-6 text-left">
+
+		                		</div><!-- end col -->
+		                		<div class="col-md-6">
+
+		                		</div><!-- end col -->
+		              		</div><!-- end row -->
+		            	</div><!-- end carousel-caption -->
+		          	</div><!-- end container -->
+	        	</div><!-- end item -->
+	      	</div><!-- end carousel-inner --> 
+	    </div>
+		
+
 		<div class='container'>
 
-			<div class='page-header'>
-			
+			<div class='container center'>
+				<h3>What's the funniest video you've seen lately? Have you ever had an idea for a funny video yourself? Did you follow through and create the video? If you answered yes to either, this website is for you.</h3>
 			</div>
-			
-			<div class='col-md-12'>
-				<h3>What's the funniest video you've seen lately? Have you ever had an idea for a funny video yourself? Did you follow through and create the video? If not, this website is for you!</h3>
-				
-				<ul style='font-size:1.5em;'>
-					<li>Issue a Challenge</li>
-					<li>Vote on Challenges You'd Like to See</li>
-					<li>Accept a Challenge and Post Your Video in Response</li>
-					<li>May the Best Video Win</li>
-				</ul>
-				
-			</div>
-			<div style='height:50px;'>
-			</div>
-			<div class='page-header'>
-			
-			</div>
-			<div class='row'>
-				<div class='col-md-6'>
-					<h2>An Example Challenge</h2>
-					<h4>Host a dance party in a public elevator</h4>
-				</div>
-				<div class='col-md-6'>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/daWnlSH90v8" frameborder="0" allowfullscreen></iframe>
-				</div>
-			</div>
-			
-			<div class='page-header'>
-			
-			</div>
-			
-			<div class='center' style='text-align:center;'>
-				<a href='/challenges/' class='btn btn-lg btn-success'>Check Out The Challenges</a>
-			</div>
-
-			<br><br>
 		</div>
-	
-	
+			
+			<div class="container-wrapper">
+			  <div class="container">
+				<div class="row margin-bottom-20">
+				  <div class="col-md-12 center">
+					<h2>May the Best Video Win!</h2>
+				  </div><!-- end col -->
+				</div><!-- end row -->
+				<div class="row">
+				  <div class="col-md-4 center">
+					<span class="fa fa-bullhorn fa-5x red"></span>
+					<h3 class="margin-top-10">Issue a Challenge</h3>
+					<p>Come up with an innovative idea and challenge the internet to take it on.</p>
+				  </div><!-- end col -->
+				  <div class="col-md-4 center">
+					<span class="fa fa-thumbs-up fa-5x green"></span>
+					<h3 class="margin-top-10">Vote on Challenges You'd Like to See</h3>
+					<p>If you see an idea that you would love to see performed on video, vote it up and give everyone else extra incentive to take it on.</p>
+				  </div><!-- end col -->
+				  <div class="col-md-4 center">
+					<span class="fa fa-video-camera fa-5x blue"></span>
+					<h3 class="margin-top-10">Accept a Challenge and Post Your Video in Response</h3>
+					<p>Post your own video in response to a challenge and watch as your video grows in popularity!</p>
+				  </div><!-- end col -->
+				</div><!-- end row -->
+			  </div><!-- end container -->
+			</div>
+			
+
+			
+			
+
+		<div class='container'>
+
+			<div class="row row-feature">
+		        <div class="col-md-5 span-text">
+		          <h2 class="margin-top-20">TOP CHALLENGE</h2>
+		          <p>Host a party in an elevator</p>
+		        </div><!-- end col -->
+		        <div class="col-md-6 col-md-offset-1 span-image center">
+		        	<iframe width="560" height="315" src="https://www.youtube.com/embed/b1jEZXL6sYI" frameborder="0" allowfullscreen></iframe>
+		        </div><!-- end col -->
+		    </div>
+		</div>
+		</div>
+		<div class='container center'>
+			<a class='btn btn-success btn-lg' href='/challenges'>See the Challenges</a>
+		</div>
 	
 	
 	</body>
