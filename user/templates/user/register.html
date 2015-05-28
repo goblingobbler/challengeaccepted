@@ -1,0 +1,271 @@
+{% extends "skeleton.html" %}
+
+{% block style %}
+<style>
+	.btn-group-vertical .btn.active {
+		background: #4ca745;
+	color: white;
+	}
+	
+	.btn-group-vertical>.btn:not(:first-child):not(.dropdown-toggle) {
+		border-top: 1px solid #aaa;
+		z-index: 5;
+	}
+</style>
+<script>
+	var emails = [
+	{% for row in emails %}
+	"{{row.email}}",
+	{% endfor %}
+	]
+</script>
+<script>
+  // This is called with the results from from FB.getLoginStatus().
+  function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      testAPI();
+    } else if (response.status === 'not_authorized') {
+      // The person is logged into Facebook, but not your app.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this app.';
+    } else {
+      // The person is not logged into Facebook, so we're not sure if
+      // they are logged into this app or not.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into Facebook.';
+    }
+  }
+
+  // This function is called when someone finishes with the Login
+  // Button.  See the onlogin handler attached to it in the sample
+  // code below.
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '{your-app-id}',
+    cookie     : true,  // enable cookies to allow the server to access 
+                        // the session
+    xfbml      : true,  // parse social plugins on this page
+    version    : 'v2.1' // use version 2.1
+  });
+
+  // Now that we've initialized the JavaScript SDK, we call 
+  // FB.getLoginStatus().  This function gets the state of the
+  // person visiting this page and can return one of three states to
+  // the callback you provide.  They can be:
+  //
+  // 1. Logged into your app ('connected')
+  // 2. Logged into Facebook, but not your app ('not_authorized')
+  // 3. Not logged into Facebook and can't tell if they are logged into
+  //    your app or not.
+  //
+  // These three cases are handled in the callback function.
+
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  // Here we run a very simple test of the Graph API after login is
+  // successful.  See statusChangeCallback() for when this call is made.
+  function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+    });
+  }
+</script>
+{% endblock %}
+
+{% block content %}
+<div id="page-wrapper" style='background:url({{placeholder.login_background.image.url}});background-size:cover;'>
+<div id="page" style='background:none;'>
+
+{% if message and message != '' %}<div class='message' style='font-size: 1.2em;color: white;text-align: center;padding: 10px;background: #4ca745;' >{{message}}</div>{%endif%}
+{% if error != '' %}<div class='message' style='font-size: 1.2em;color: white;text-align: center;padding: 10px;background: rgb(176, 0, 0);' >{{error}}</div>{%endif%}
+
+<div class='row' style='height:800px;'>
+    <div class='col-lg-3 col-md-4 col-sm-6 col-xs-8' style='background:#272727;float:none;margin:40px auto 0px;'>
+    	<div class='col-sm-12' style='background:#272727;border-radius:4px;'>
+    	<form action="/user/register" method="post" class='col-sm-12 registerForm' onsubmit="return validateForm()">
+    		<div class='col-sm-12'>
+    			<h2 style='text-align:center;color:white;margin-top:0px;'><br>Register as a:</h2></div>
+			
+			<div class='col-sm-12'>
+				<div class="btn-group-vertical col-xs-12" style="margin-bottom:10px;color:black;">
+					
+					<button type="button" onclick="chooseButton(this, 0)" class="btn blue {%if start == 0%}active{%endif%} col-sm-3">Visitor</button>
+					<div style="display:none;">
+						<input type="radio" name="type" value="0" {%if start == 0%}checked{%endif%}>
+						<input type="radio" name="type" value="1" {%if start == 1%}checked{%endif%}>
+						<input type="radio" name="type" value="2">
+						<input type="radio" name="type" value="3">
+					</div>
+					<button type="button" onclick="chooseButton(this, 1)" class="btn blue {%if start == 1%}active{%endif%} col-sm-3">Member</button>
+					<button type="button" onclick="chooseButton(this, 2)" class="btn blue col-sm-3">Chef</button>
+					<button type="button" onclick="chooseButton(this, 3)" class="btn blue col-sm-3">Partner</button>
+				</div>
+			</div>
+			<div class='col-xs-12'>
+	    		<br>
+	    		<div style='text-align:center;'>
+	    			<a style='display:inline-block;' href='https://www.facebook.com/dialog/oauth?client_id=1562656020613677&scope=email&redirect_uri=http://nutritionalfactors.com/user/register'>
+	    			<img style='width:100%;' src='{{ex_static}}images/btnLoginFacebook.png' /></a>
+	    			<br><h3 style='color:white;'>or</h3>
+	    		</div>
+	    	</div>
+	    	
+			<div class='col-xs-12'><input name='title' type="text" placeholder='Name' value=''></div>
+			<div class='col-xs-12'><input name='email' type="text" placeholder="Email" value='{{email}}'></div>
+			
+			<div class='col-xs-12'><input name='password' type="password" placeholder="Password"></div>
+			<div class='col-xs-12'><input name='repassword' type="password" placeholder="Confirm Password"></div>
+			
+			<div class='col-xs-12'>
+				<input name='code' type="text" placeholder='Enter code (if applicable)' value='{{code}}' {%if start != 1%}style='display:none;'{%endif%} >
+			</div>
+			
+			
+			{% csrf_token %}
+			<div class='col-sm-6 col-sm-offset-3 col-xs-12'><input type="submit" value="REGISTER" class="btn" style='padding:10px;margin:5px 0px;background:#4ca745;color:white;'></div>
+		</form>
+		
+		
+		
+		</div>
+		<div style='clear:both;'>
+			<div style='text-align:center;color:white;'>Already a user? <a href='/user/login'>Login</a></div>
+			
+			<br><br></div>
+	</div>
+	<div style='clear:both;'><br><br></div>
+</div>
+</div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+<script>
+	function validateForm() {
+		$('.errorCode').remove();
+		var email = $('.registerForm input[name=email]').val();
+		/*var name = $('.registerForm input[name=username]').val();*/
+		
+		if (!IsEmail(email)){
+			$('.registerForm input[name=email]').parent().prepend('<div class="errorCode" style="color:red;">Must be a valid email!</div>')
+			return false;
+		}
+		if (!checkEmail($('.registerForm input[name=email]'))){
+			return false;
+		}
+		if (!checkPassword($('.registerForm input[name=password]'))){
+			return false;
+		}
+		if ($('.registerForm input[name=password]').val() != $('.registerForm input[name=repassword]').val()){
+			$('.registerForm input[name=password]').parent().prepend('<div class="errorCode" style="color:red;">Passwords must match.</div>')
+			return false;
+		}
+		if ($('.registerForm input[name=title]').val() == ''){
+			$('.registerForm input[name=title]').parent().prepend('<div class="errorCode" style="color:red;">Please enter a name.</div>')
+			return false;
+		}
+		
+		/*
+		if (name == ''){
+			$('.registerForm input[name=username]').parent().prepend('<div class="errorCode" style="color:red;">Please enter a username</div>')
+			return false;
+		}
+		*/
+	}
+	
+	function IsEmail(email) {
+		var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		return regex.test(email);
+	}
+	
+	function checkEmail(thisObject){
+		$(thisObject).parent().children('.errorCode').remove();
+		
+		var name = $(thisObject).val();
+		if ($.inArray(name, emails) > -1){
+			$(thisObject).parent().prepend('<div class="errorCode" style="color:red;">Email is taken.</div>');
+			return false;
+		}
+		return true;
+	}
+	function checkPassword(thisObject){
+		$(thisObject).parent().children('.errorCode').remove();
+		
+		var password = $(thisObject).val();
+		if (password.length < 8 || !IsAlph(password)){
+			$(thisObject).parent().prepend('<div class="errorCode" style="color:red;">Password \
+					must be a minimum of 8 characters and contain only letters and numbers.</div>');
+			return false;
+		}
+		else if (password.search(/\d/) == -1 || password.search(/[a-zA-Z]/) == -1) {
+			$(thisObject).parent().prepend('<div class="errorCode" style="color:red;">Password \
+			must have at least one letter and one number.</div>');
+			return false;
+		}
+		return true;
+	}
+	function IsAlph(password){
+		var regex = /^[a-zA-Z0-9]+$/;
+		return regex.test(password);
+	}
+	
+	
+	function showLogin(){
+		$('.signupContainer .container').height(0);
+		$('.signupContainer .signup').height($('.signupContainer .signup h2').height() + 30);
+		
+		$('.loginContainer .container').height($('.loginContainer .content').height());
+		$('.loginContainer .login').height(0);
+	}
+	
+	function chooseButton(thisObject, i){
+		if (i == 1){
+			$('[name=code]').show();
+		}
+		else if (i == 2){
+			$('[name=title]').show();
+		}
+		else {
+			$('[name=code]').hide();
+		}
+		
+		
+		$(thisObject).parent().children('.btn').removeClass('active');
+		$(thisObject).addClass('active');
+		
+		$(thisObject).parent().children('div').children('input[type=radio]').prop("checked", false);
+		$(thisObject).parent().children('div').children('input[type=radio]').eq(i).prop("checked", true);
+	}
+</script>
+{% endblock %}
+

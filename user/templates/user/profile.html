@@ -1,0 +1,112 @@
+{% extends "skeleton.html" %}
+{% load home_extras %}
+
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{{ex_static}}recipe/style.css"/>
+<style>
+	body {color:white;}
+	.profile {
+		overflow: hidden;
+	}
+	
+</style>
+{% endblock %}
+
+{% block content %}
+<body id="body" class="">
+<div id="page-wrapper">
+<div id="page" style='padding-top: 80px;margin:0px auto;'>
+	
+{% include "header.html" %}
+<div style="clear:both"></div>
+
+
+<div id="body-container">
+  <div class="wrapper">
+    <div class="main-content">
+    	<div class='row profile transitions' style='color:white;margin:20px;'>
+			<h1>Profile</h1>
+	    	<div style='color:white;'>Hello {{user.get_full_name}}!</div>
+	    	<div><img src='{{user.picture}}' /></div>
+			<div style='clear:both;'><br><br></div>
+		</div>
+		
+		{% include "recipe/menuplanner.html" %}
+		
+		<div class='backtosearch' style='display:none;text-align:left;'>
+			<div class='button' onclick='backtosearch()' style='display: inline-block;'>
+				<span class='glyphicon glyphicon-arrow-left'></span> Back to Search</div>
+		</div>
+		
+		<div class='recipes transitions sidebar blackback'><div class='row recipesInner'>
+			
+		</div><br><br></div>
+		
+		<div class='recipesmall'>
+			
+		</div>
+	
+	</div>
+  </div>
+</div>
+
+</div></div>
+</body>
+
+{% endblock %}
+
+{% block script %}
+<script>
+	$(document).ready(function(){
+		var max = 0;
+		$('.Entree .product-name').each(function(){
+			if ($(this).height() > max){max = $(this).height();}
+		});
+		$('.Entree .product-name').height(max);
+		
+		$('body').on('mouseenter','.recipes.sidebar .recipe',function(){
+			$(this).parent().width('500px');
+		});
+		$('body').on('mouseleave','.recipes.sidebar .recipe',function(){
+			$(this).parent().width('auto');
+		});
+	});
+	
+	function loadRecipe(thisObject, id){
+		ajaxWrapper('GET', '/recipe/small/'+id, {}, function(value){
+			$('.profile').height($('.profile').height());
+			$('.menu_planner').height($('.menu_planner').height());
+			
+			$(thisObject).closest('.meal').find('.recipe').each(function(){
+				$(this).clone().appendTo('.recipes .recipesInner');
+			});
+			setTimeout(function(){
+				$('.profile').height(0);
+				$('.menu_planner').height(0);
+				
+				setTimeout(function(){
+					$('.profile').hide();
+					$('.menu_planner').hide();
+					
+					$('.backtosearch').show();
+					$('.recipesmall').html(value);
+					
+					$('.recipes').css('left','0px');
+					$('.recipesInner').perfectScrollbar();
+				},220);
+			},10);
+		});
+	}
+	
+	function backtosearch(){
+		$('.recipes').css('left','-200px');
+		$('.recipes .recipesInner').html('');
+		$('.recipesmall').html('');
+		$('.backtosearch').hide();
+		$('.profile').height('auto').show();
+		$('.menu_planner').height('auto').show();
+	}
+	
+</script>
+{% endblock %}
+

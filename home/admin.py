@@ -6,3 +6,8 @@ class ChallengeAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(Challenge, ChallengeAdmin)
+
+class CommentAdmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(Comments, CommentAdmin)

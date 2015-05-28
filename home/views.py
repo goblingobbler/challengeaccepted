@@ -47,20 +47,54 @@ def comment(request, id):
         link = request.POST['link']
         desc = request.POST['desc']
         ch = Challenge.objects.filter(pk = id).first()
-
-        com = Comments(challenge = ch, link = link, desc = desc)
+        
+        [link, valid] = validateLink(link)
+        
+        com = Comments(challenge = ch, link = link, desc = desc, valid_video = valid)
         com.save()
-
+        
         return HttpResponseRedirect(reverse('challenge', args=[id]))
 
     return render(request, 'comment_form.html')
 
 def viewchallenge(request, id):
-
     ch = Challenge.objects.filter(pk = id).first()
+    
+    if 'c' in request.GET:
+        com = get_object_or_404(Comments, pk=reqeust.GET['c'])
+        
+        return render(request, 'comment_view.html', {'challenge':ch, 'comment':com})
+    
+    else:
+        return render(request, 'challenge.html', {'challenge':ch})
 
-    return render(request, 'challenge.html', {'row':ch})
 
+
+def validateLink(link):
+    str = ''
+    if 'iframe' in link:
+        #<iframe width="560" height="315" src="https://www.youtube.com/embed/eytE4BU9Atk" frameborder="0" allowfullscreen></iframe>
+        for row in link.split(' '):
+            if 'src' in row and 'youtube' in row:
+                str = row.replace('"','').split('/')[-1]
+                
+    elif 'youtube' in link:
+        if 'watch' in link:
+            for row in link.split('?')[-1].split('&'):
+                if 'v' == row.split('=')[0]:
+                    str = row.split('=')[-1]
+        else:
+            str = link.split('/')[-1]
+    elif 1 not in [c in link for c in ['&','/','?','=']]:
+        str = link
+        
+    
+    if str != '':
+        return [str,True]
+    else:
+        return [str,False]
+    
+    
 
 '''
 

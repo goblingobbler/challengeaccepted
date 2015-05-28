@@ -7,19 +7,25 @@ from jsonfield import JSONField
 
 import secretballot
 
-
 class Challenge(models.Model):
     title = models.CharField(_('Title'), max_length=300, help_text=_('Title'))
     desc = models.TextField(_('Description'), help_text=_('Description'))
 
+    def __unicode__( self ):
+        return self.title
 
 class Comments(models.Model):
     challenge = models.ForeignKey(Challenge)
     
+    parent = models.ForeignKey('self', blank = True, null = True)
+    
+    valid_video = models.BooleanField(default = False)
+    
     link = models.CharField(_('Video Link'), max_length=300, help_text=_('Video link'))
     desc = models.TextField(_('Description'), help_text=_('Description'))
 
-
+    def __unicode__( self ):
+        return str(self.challenge) + ' ' + self.desc
 
 secretballot.enable_voting_on(Challenge)
 secretballot.enable_voting_on(Comments)
