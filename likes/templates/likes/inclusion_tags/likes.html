@@ -1,0 +1,20 @@
+{% load i18n %}
+
+{% if import_js %}
+    <script type="text/javascript" src="{{ STATIC_URL }}likes/includes/likes.js"></script>
+{% endif %}
+
+{% if likes_enabled %}
+    <div class="likes" style='margin:4px;'>
+        <div style='display:inline-block;padding:4px 10px;'>{{ content_obj.vote_total }} Total</div>
+        <span>
+            {% if can_vote %}
+                <a class="btn liker" href="{% url "like" content_type content_obj.id 1 %}" rel="nofollow">{% trans "LOL" %}</a>
+
+                <a class="btn liker" href="{% url "like" content_type content_obj.id -1 %}" rel="nofollow">{% trans "Boooooo" %}</a>
+            {% else %}
+                {% trans "Likes" %}
+            {% endif %}
+        </span>
+    </div>
+{% endif %}

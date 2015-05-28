@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Challenge Accepted</title>
+<link href='http://fonts.googleapis.com/css?family=Raleway:%20400,100,800,900,700,600,500,200,300' rel='stylesheet' type='text/css'>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA75SXaNNsVtJVayxlKtDAeF5ZBSVomrzM&libraries=places&sensor=false"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+<script src="{{ex_static}}jquery.backstretch.min.js"></script>
+<script type="text/javascript" src="{{ex_static}}canvasjs.min.js"></script>
+<script src="{{ex_static}}slick.js"></script>
+<script src="{{ex_static}}jquery.fancybox.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="{{ ex_static }}slick.css{{v}}">
+<link rel="stylesheet" href="{{ ex_static }}slick-theme.css{{v}}">
+<link rel="stylesheet" href="{{ex_static}}jquery.fancybox.css" />
+<link rel="stylesheet" href="{{ex_static}}style.css" />
+
+
+<style>
+	.icon-bar {
+		background: grey;
+	}
+	
+	.navbar .btn {
+		color:white;
+		padding: 10px 20px;
+	}
+	.navbar .btn:hover {
+		background: rgba(0,0,0,.3);
+	}
+
+	.cover {
+		
+	}
+	.cover .cover-inner {
+		
+	}
+
+	.btn {
+		background: #24cccd;
+		font-size: 21px;
+  		color: white;
+  		font-weight: bold;
+	}
+	.btn:hover {
+		color:white;
+	}
+</style>
+
+{% block style %}
+{% endblock %}
+
+</head>
+
+<body>
+{% block content %}
+{% endblock %}
+
+<div class='cover'>
+	<div class='cover-inner'>
+		<div class='cover-content'>
+		</div>
+		{% csrf_token %}
+	</div>
+</div>
+
+<script src="{{ ex_static }}script.js{{v}}"></script>
+<script>
+    $(document).ready(function(){
+    $(".fancy a").fancybox();
+    });
+    
+    
+</script>
+		
+{% block script %}
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{% load likes_inclusion_tags %}
+
+
+{% for row in objs %}
+<div class='col-xs-12' style='border:thin solid #ccc;padding:0px;margin:10px 0px;'>
+	<div class='col-md-4 col-xs-12' style='background:#ddd;padding:10px;margin:0px;'>
+		<h2>{{row.title}}</h2>
+		<h4>{{row.desc}}</h4>
+		
+	</div>
+	<div class='col-md-8 col-xs-12'>
+		{% likes row %}
+		
+		<a href='/challenge/{{row.id}}/' class='btn'>Take on the Challenge!</a>
+		
+		{{ row.comments_set.all|length }}
+		<br><br>	
+	</div>
+	
+
+</div>
+{% endfor %}

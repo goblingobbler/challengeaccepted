@@ -1,0 +1,180 @@
+[Tue May 12 03:09:10 2015] [error] /home/dmiller89/lib/python2.7/facebook_sdk-0.4.0-py2.7.egg/facebook.py:52: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Tue May 12 03:09:10 2015] [error] 
+[Tue May 12 03:32:42 2015] [error] /home/dmiller89/lib/python2.7/facebook_sdk-0.4.0-py2.7.egg/facebook.py:52: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Tue May 12 03:32:42 2015] [error] 
+[Tue May 12 04:40:20 2015] [error] /home/dmiller89/lib/python2.7/facebook_sdk-0.4.0-py2.7.egg/facebook.py:52: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Tue May 12 04:40:20 2015] [error] 
+[Tue May 12 06:47:34 2015] [error] /home/dmiller89/lib/python2.7/facebook_sdk-0.4.0-py2.7.egg/facebook.py:52: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Tue May 12 06:47:34 2015] [error] 
+[Tue May 12 07:05:10 2015] [error] /home/dmiller89/lib/python2.7/facebook_sdk-0.4.0-py2.7.egg/facebook.py:52: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Tue May 12 07:05:10 2015] [error] 
+[Tue May 12 07:06:46 2015] [error] /home/dmiller89/lib/python2.7/facebook_sdk-0.4.0-py2.7.egg/facebook.py:52: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Tue May 12 07:06:46 2015] [error] 
+[Tue May 12 07:17:16 2015] [error] /home/dmiller89/lib/python2.7/facebook_sdk-0.4.0-py2.7.egg/facebook.py:52: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Tue May 12 07:17:16 2015] [error] 
+[Tue May 12 07:27:59 2015] [error] /home/dmiller89/lib/python2.7/facebook_sdk-0.4.0-py2.7.egg/facebook.py:52: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Tue May 12 07:27:59 2015] [error] 
+[Tue May 12 07:34:44 2015] [error] /home/dmiller89/lib/python2.7/facebook_sdk-0.4.0-py2.7.egg/facebook.py:52: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Tue May 12 07:34:44 2015] [error] 
+[Tue May 12 08:41:43 2015] [error] /home/dmiller89/lib/python2.7/facebook_sdk-0.4.0-py2.7.egg/facebook.py:52: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Tue May 12 08:41:43 2015] [error] 
+[Tue May 12 08:47:48 2015] [error] /home/dmiller89/lib/python2.7/facebook_sdk-0.4.0-py2.7.egg/facebook.py:52: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Tue May 12 08:47:48 2015] [error] 
+[Tue May 12 10:31:04 2015] [error] /home/dmiller89/lib/python2.7/facebook_sdk-0.4.0-py2.7.egg/facebook.py:52: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Tue May 12 10:31:04 2015] [error] 
+[Tue May 12 10:33:47 2015] [error] /home/dmiller89/lib/python2.7/facebook_sdk-0.4.0-py2.7.egg/facebook.py:52: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Tue May 12 10:33:47 2015] [error] 
+[Tue May 12 11:52:06 2015] [error] /home/dmiller89/lib/python2.7/facebook_sdk-0.4.0-py2.7.egg/facebook.py:52: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Tue May 12 11:52:06 2015] [error] 
+[Tue May 12 13:47:47 2015] [error] /home/dmiller89/lib/python2.7/facebook_sdk-0.4.0-py2.7.egg/facebook.py:52: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Tue May 12 13:47:47 2015] [error] 
+[Tue May 12 13:48:19 2015] [error] /usr/local/lib/python2.7/site-packages/pkg_resources.py:975: UserWarning: /home/dmiller89/.python-eggs is writable by group/others and vulnerable to attack when used with get_resource_filename. Consider a more secure location (set with .set_extraction_path or the PYTHON_EGG_CACHE environment variable).
+[Tue May 12 13:48:19 2015] [error]   warnings.warn(msg, UserWarning)
+[Tue May 12 13:48:19 2015] [error] 
+[Tue May 12 13:48:20 2015] [error] /home/dmiller89/lib/python2.7/Pillow-2.5.3-py2.7-linux-x86_64.egg/PIL/TiffImagePlugin.py:452: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2097152 bytes but only got 0. Skipping tag 2
+[Tue May 12 13:48:20 2015] [error] 
+[Tue May 12 13:48:20 2015] [error] /home/dmiller89/lib/python2.7/Pillow-2.5.3-py2.7-linux-x86_64.egg/PIL/TiffImagePlugin.py:452: UserWarning: Possibly corrupt EXIF data.  Expecting to read 65536 bytes but only got 0. Skipping tag 3
+[Tue May 12 13:48:20 2015] [error] 
+[Tue May 12 13:48:20 2015] [error] /home/dmiller89/lib/python2.7/Pillow-2.5.3-py2.7-linux-x86_64.egg/PIL/TiffImagePlugin.py:452: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2097152 bytes but only got 0. Skipping tag 5
+[Tue May 12 13:48:20 2015] [error] 
+[Tue May 12 13:48:20 2015] [error] /home/dmiller89/lib/python2.7/Pillow-2.5.3-py2.7-linux-x86_64.egg/PIL/TiffImagePlugin.py:452: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2621440 bytes but only got 0. Skipping tag 5
+[Tue May 12 13:48:20 2015] [error] 
+[Tue May 12 13:48:20 2015] [error] /home/dmiller89/lib/python2.7/Pillow-2.5.3-py2.7-linux-x86_64.egg/PIL/TiffImagePlugin.py:452: UserWarning: Possibly corrupt EXIF data.  Expecting to read 131072 bytes but only got 0. Skipping tag 3
+[Tue May 12 13:48:20 2015] [error] 
+[Tue May 12 13:48:20 2015] [error] /home/dmiller89/lib/python2.7/Pillow-2.5.3-py2.7-linux-x86_64.egg/PIL/TiffImagePlugin.py:452: UserWarning: Possibly corrupt EXIF data.  Expecting to read 20447232 bytes but only got 744. Skipping tag 4
+[Tue May 12 13:48:20 2015] [error] 
+[Tue May 12 13:48:20 2015] [error] /home/dmiller89/lib/python2.7/Pillow-2.5.3-py2.7-linux-x86_64.egg/PIL/TiffImagePlugin.py:452: UserWarning: Possibly corrupt EXIF data.  Expecting to read 729604 bytes but only got 743. Skipping tag 513
+[Tue May 12 13:48:20 2015] [error] 
+[Tue May 12 13:48:20 2015] [error] /home/dmiller89/lib/python2.7/Pillow-2.5.3-py2.7-linux-x86_64.egg/PIL/TiffImagePlugin.py:452: UserWarning: Possibly corrupt EXIF data.  Expecting to read 3846701056 bytes but only got 0. Skipping tag 2
+[Tue May 12 13:48:20 2015] [error] 
+[Tue May 12 13:48:20 2015] [error] /home/dmiller89/lib/python2.7/Pillow-2.5.3-py2.7-linux-x86_64.egg/PIL/TiffImagePlugin.py:452: UserWarning: Possibly corrupt EXIF data.  Expecting to read 3300917248 bytes but only got 0. Skipping tag 7
+[Tue May 12 13:48:20 2015] [error] 
+[Tue May 12 14:35:19 2015] [error] /home/dmiller89/lib/python2.7/facebook_sdk-0.4.0-py2.7.egg/facebook.py:52: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Tue May 12 14:35:19 2015] [error] 
+[Tue May 12 14:43:30 2015] [error] /home/dmiller89/lib/python2.7/facebook_sdk-0.4.0-py2.7.egg/facebook.py:52: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Tue May 12 14:43:30 2015] [error] 
+[Tue May 12 14:44:36 2015] [error] /home/dmiller89/lib/python2.7/facebook_sdk-0.4.0-py2.7.egg/facebook.py:52: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Tue May 12 14:44:36 2015] [error] 
+[Tue May 12 14:46:47 2015] [error] /home/dmiller89/lib/python2.7/facebook_sdk-0.4.0-py2.7.egg/facebook.py:52: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Tue May 12 14:46:47 2015] [error] 
+[Tue May 12 16:09:51 2015] [error] /home/dmiller89/lib/python2.7/facebook_sdk-0.4.0-py2.7.egg/facebook.py:52: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Tue May 12 16:09:51 2015] [error] 
+[Tue May 12 16:11:58 2015] [error] /home/dmiller89/lib/python2.7/facebook_sdk-0.4.0-py2.7.egg/facebook.py:52: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Tue May 12 16:11:58 2015] [error] 
+[Tue May 12 18:18:29 2015] [error] /home/dmiller89/lib/python2.7/facebook_sdk-0.4.0-py2.7.egg/facebook.py:52: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Tue May 12 18:18:29 2015] [error] 
+[Tue May 12 19:31:17 2015] [error] /home/dmiller89/lib/python2.7/facebook_sdk-0.4.0-py2.7.egg/facebook.py:52: DeprecationWarning: django.utils.simplejson is deprecated; use json instead.
+[Tue May 12 19:31:17 2015] [error] 
+[Wed May 13 00:19:50 2015] [notice] caught SIGTERM, shutting down
+[Wed May 13 00:19:55 2015] [warn] mod_wsgi: Compiled for Python/2.7.5.
+[Wed May 13 00:19:55 2015] [warn] mod_wsgi: Runtime using Python/2.7.9.
+[Wed May 13 00:19:55 2015] [notice] Apache/2.2.25 (Unix) mod_wsgi/3.4 Python/2.7.9 configured -- resuming normal operations
+[Wed May 13 00:20:30 2015] [error] /usr/local/lib/python2.7/site-packages/pkg_resources.py:975: UserWarning: /home/dmiller89/.python-eggs is writable by group/others and vulnerable to attack when used with get_resource_filename. Consider a more secure location (set with .set_extraction_path or the PYTHON_EGG_CACHE environment variable).
+[Wed May 13 00:20:30 2015] [error]   warnings.warn(msg, UserWarning)
+[Wed May 13 00:20:30 2015] [error] 
+[Wed May 13 00:20:32 2015] [error] /home/dmiller89/lib/python2.7/Pillow-2.5.3-py2.7-linux-x86_64.egg/PIL/TiffImagePlugin.py:452: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2097152 bytes but only got 0. Skipping tag 2
+[Wed May 13 00:20:32 2015] [error] 
+[Wed May 13 00:20:32 2015] [error] /home/dmiller89/lib/python2.7/Pillow-2.5.3-py2.7-linux-x86_64.egg/PIL/TiffImagePlugin.py:452: UserWarning: Possibly corrupt EXIF data.  Expecting to read 65536 bytes but only got 0. Skipping tag 3
+[Wed May 13 00:20:32 2015] [error] 
+[Wed May 13 00:20:32 2015] [error] /home/dmiller89/lib/python2.7/Pillow-2.5.3-py2.7-linux-x86_64.egg/PIL/TiffImagePlugin.py:452: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2097152 bytes but only got 0. Skipping tag 5
+[Wed May 13 00:20:32 2015] [error] 
+[Wed May 13 00:20:32 2015] [error] /home/dmiller89/lib/python2.7/Pillow-2.5.3-py2.7-linux-x86_64.egg/PIL/TiffImagePlugin.py:452: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2621440 bytes but only got 0. Skipping tag 5
+[Wed May 13 00:20:32 2015] [error] 
+[Wed May 13 00:20:32 2015] [error] /home/dmiller89/lib/python2.7/Pillow-2.5.3-py2.7-linux-x86_64.egg/PIL/TiffImagePlugin.py:452: UserWarning: Possibly corrupt EXIF data.  Expecting to read 131072 bytes but only got 0. Skipping tag 3
+[Wed May 13 00:20:32 2015] [error] 
+[Wed May 13 00:20:32 2015] [error] /home/dmiller89/lib/python2.7/Pillow-2.5.3-py2.7-linux-x86_64.egg/PIL/TiffImagePlugin.py:452: UserWarning: Possibly corrupt EXIF data.  Expecting to read 20447232 bytes but only got 744. Skipping tag 4
+[Wed May 13 00:20:32 2015] [error] 
+[Wed May 13 00:20:32 2015] [error] /home/dmiller89/lib/python2.7/Pillow-2.5.3-py2.7-linux-x86_64.egg/PIL/TiffImagePlugin.py:452: UserWarning: Possibly corrupt EXIF data.  Expecting to read 729604 bytes but only got 743. Skipping tag 513
+[Wed May 13 00:20:32 2015] [error] 
+[Wed May 13 00:20:32 2015] [error] /home/dmiller89/lib/python2.7/Pillow-2.5.3-py2.7-linux-x86_64.egg/PIL/TiffImagePlugin.py:452: UserWarning: Possibly corrupt EXIF data.  Expecting to read 3846701056 bytes but only got 0. Skipping tag 2
+[Wed May 13 00:20:32 2015] [error] 
+[Wed May 13 00:20:32 2015] [error] /home/dmiller89/lib/python2.7/Pillow-2.5.3-py2.7-linux-x86_64.egg/PIL/TiffImagePlugin.py:452: UserWarning: Possibly corrupt EXIF data.  Expecting to read 3300917248 bytes but only got 0. Skipping tag 7
+[Wed May 13 00:20:32 2015] [error] 
+[Wed May 13 00:29:49 2015] [error] [client 127.0.0.1] Target WSGI script not found or unable to stat: /home/dmiller89/webapps/django_test/challenge/myproject
+[Wed May 13 00:29:49 2015] [error] [client 127.0.0.1] Target WSGI script not found or unable to stat: /home/dmiller89/webapps/django_test/challenge/myproject, referer: http://dmiller89.webfactional.com/
+[Wed May 13 00:30:45 2015] [notice] caught SIGTERM, shutting down
+[Wed May 13 00:30:50 2015] [warn] mod_wsgi: Compiled for Python/2.7.5.
+[Wed May 13 00:30:50 2015] [warn] mod_wsgi: Runtime using Python/2.7.9.
+[Wed May 13 00:30:50 2015] [notice] Apache/2.2.25 (Unix) mod_wsgi/3.4 Python/2.7.9 configured -- resuming normal operations
+[Wed May 13 00:31:12 2015] [error] [client 127.0.0.1] Target WSGI script not found or unable to stat: /home/dmiller89/webapps/django_test/challenge/myproject
+[Wed May 13 00:31:13 2015] [error] [client 127.0.0.1] Target WSGI script not found or unable to stat: /home/dmiller89/webapps/django_test/challenge/myproject
+[Wed May 13 00:31:15 2015] [error] [client 127.0.0.1] Target WSGI script not found or unable to stat: /home/dmiller89/webapps/django_test/challenge/myproject
+[Wed May 13 00:31:54 2015] [error] [client 127.0.0.1] Target WSGI script not found or unable to stat: /home/dmiller89/webapps/django_test/challenge/myproject
+[Wed May 13 00:32:42 2015] [notice] caught SIGTERM, shutting down
+[Wed May 13 00:32:47 2015] [warn] mod_wsgi: Compiled for Python/2.7.5.
+[Wed May 13 00:32:47 2015] [warn] mod_wsgi: Runtime using Python/2.7.9.
+[Wed May 13 00:32:47 2015] [notice] Apache/2.2.25 (Unix) mod_wsgi/3.4 Python/2.7.9 configured -- resuming normal operations
+[Wed May 13 00:33:13 2015] [error] [client 127.0.0.1] Target WSGI script not found or unable to stat: /home/dmiller89/webapps/django_test/challenge/myproject
+[Wed May 13 00:33:17 2015] [error] [client 127.0.0.1] Target WSGI script not found or unable to stat: /home/dmiller89/webapps/django_test/challenge/myproject
+[Wed May 13 00:33:47 2015] [error] [client 127.0.0.1] Target WSGI script not found or unable to stat: /home/dmiller89/webapps/django_test/challenge/myproject
+[Wed May 13 00:34:00 2015] [error] [client 127.0.0.1] Target WSGI script not found or unable to stat: /home/dmiller89/webapps/django_test/challenge/myproject
+[Wed May 13 00:34:01 2015] [error] [client 127.0.0.1] Target WSGI script not found or unable to stat: /home/dmiller89/webapps/django_test/challenge/myproject
+[Wed May 13 00:34:08 2015] [notice] caught SIGTERM, shutting down
+[Wed May 13 00:34:13 2015] [warn] mod_wsgi: Compiled for Python/2.7.5.
+[Wed May 13 00:34:13 2015] [warn] mod_wsgi: Runtime using Python/2.7.9.
+[Wed May 13 00:34:13 2015] [notice] Apache/2.2.25 (Unix) mod_wsgi/3.4 Python/2.7.9 configured -- resuming normal operations
+[Wed May 13 00:34:18 2015] [error] [client 127.0.0.1] Target WSGI script not found or unable to stat: /home/dmiller89/webapps/django_test/challenge/myproject
+[Wed May 13 00:34:48 2015] [error] [client 127.0.0.1] Target WSGI script not found or unable to stat: /home/dmiller89/webapps/django_test/challenge/myproject
+[Wed May 13 00:35:08 2015] [error] [client 127.0.0.1] Target WSGI script not found or unable to stat: /home/dmiller89/webapps/django_test/challenge/myproject
+[Wed May 13 00:35:10 2015] [error] [client 127.0.0.1] Target WSGI script not found or unable to stat: /home/dmiller89/webapps/django_test/challenge/myproject
+[Wed May 13 00:35:29 2015] [error] [client 127.0.0.1] Target WSGI script not found or unable to stat: /home/dmiller89/webapps/django_test/challenge/myproject
+[Wed May 13 00:37:47 2015] [notice] caught SIGTERM, shutting down
+[Wed May 13 00:37:52 2015] [warn] mod_wsgi: Compiled for Python/2.7.5.
+[Wed May 13 00:37:52 2015] [warn] mod_wsgi: Runtime using Python/2.7.9.
+[Wed May 13 00:37:52 2015] [notice] Apache/2.2.25 (Unix) mod_wsgi/3.4 Python/2.7.9 configured -- resuming normal operations
+[Wed May 13 00:37:55 2015] [error] [client 127.0.0.1] mod_wsgi (pid=26316): Exception occurred processing WSGI script '/home/dmiller89/webapps/django_test/challenge/challenge/wsgi.py'.
+[Wed May 13 00:37:55 2015] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Wed May 13 00:37:55 2015] [error] [client 127.0.0.1]   File "/home/dmiller89/webapps/django_test/lib/python2.7/django/core/handlers/wsgi.py", line 187, in __call__
+[Wed May 13 00:37:55 2015] [error] [client 127.0.0.1]     self.load_middleware()
+[Wed May 13 00:37:55 2015] [error] [client 127.0.0.1]   File "/home/dmiller89/webapps/django_test/lib/python2.7/django/core/handlers/base.py", line 44, in load_middleware
+[Wed May 13 00:37:55 2015] [error] [client 127.0.0.1]     for middleware_path in settings.MIDDLEWARE_CLASSES:
+[Wed May 13 00:37:55 2015] [error] [client 127.0.0.1]   File "/home/dmiller89/webapps/django_test/lib/python2.7/django/conf/__init__.py", line 54, in __getattr__
+[Wed May 13 00:37:55 2015] [error] [client 127.0.0.1]     self._setup(name)
+[Wed May 13 00:37:55 2015] [error] [client 127.0.0.1]   File "/home/dmiller89/webapps/django_test/lib/python2.7/django/conf/__init__.py", line 49, in _setup
+[Wed May 13 00:37:55 2015] [error] [client 127.0.0.1]     self._wrapped = Settings(settings_module)
+[Wed May 13 00:37:55 2015] [error] [client 127.0.0.1]   File "/home/dmiller89/webapps/django_test/lib/python2.7/django/conf/__init__.py", line 132, in __init__
+[Wed May 13 00:37:55 2015] [error] [client 127.0.0.1]     % (self.SETTINGS_MODULE, e)
+[Wed May 13 00:37:55 2015] [error] [client 127.0.0.1] ImportError: Could not import settings 'curbmetrics.settings' (Is it on sys.path? Is there an import error in the settings file?): No module named curbmetrics.settings
+[Wed May 13 00:40:25 2015] [error] [client 127.0.0.1] mod_wsgi (pid=27962): Exception occurred processing WSGI script '/home/dmiller89/webapps/django_test/challenge/challenge/wsgi.py'.
+[Wed May 13 00:40:25 2015] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Wed May 13 00:40:25 2015] [error] [client 127.0.0.1]   File "/home/dmiller89/webapps/django_test/lib/python2.7/django/core/handlers/wsgi.py", line 187, in __call__
+[Wed May 13 00:40:25 2015] [error] [client 127.0.0.1]     self.load_middleware()
+[Wed May 13 00:40:25 2015] [error] [client 127.0.0.1]   File "/home/dmiller89/webapps/django_test/lib/python2.7/django/core/handlers/base.py", line 44, in load_middleware
+[Wed May 13 00:40:25 2015] [error] [client 127.0.0.1]     for middleware_path in settings.MIDDLEWARE_CLASSES:
+[Wed May 13 00:40:25 2015] [error] [client 127.0.0.1]   File "/home/dmiller89/webapps/django_test/lib/python2.7/django/conf/__init__.py", line 54, in __getattr__
+[Wed May 13 00:40:25 2015] [error] [client 127.0.0.1]     self._setup(name)
+[Wed May 13 00:40:25 2015] [error] [client 127.0.0.1]   File "/home/dmiller89/webapps/django_test/lib/python2.7/django/conf/__init__.py", line 49, in _setup
+[Wed May 13 00:40:25 2015] [error] [client 127.0.0.1]     self._wrapped = Settings(settings_module)
+[Wed May 13 00:40:25 2015] [error] [client 127.0.0.1]   File "/home/dmiller89/webapps/django_test/lib/python2.7/django/conf/__init__.py", line 132, in __init__
+[Wed May 13 00:40:25 2015] [error] [client 127.0.0.1]     % (self.SETTINGS_MODULE, e)
+[Wed May 13 00:40:25 2015] [error] [client 127.0.0.1] ImportError: Could not import settings 'curbmetrics.settings' (Is it on sys.path? Is there an import error in the settings file?): No module named curbmetrics.settings
+[Wed May 13 00:42:07 2015] [notice] caught SIGTERM, shutting down
+[Wed May 13 00:42:12 2015] [warn] mod_wsgi: Compiled for Python/2.7.5.
+[Wed May 13 00:42:12 2015] [warn] mod_wsgi: Runtime using Python/2.7.9.
+[Wed May 13 00:42:12 2015] [notice] Apache/2.2.25 (Unix) mod_wsgi/3.4 Python/2.7.9 configured -- resuming normal operations
+[Wed May 13 00:42:15 2015] [error] [client 127.0.0.1] mod_wsgi (pid=31870): Exception occurred processing WSGI script '/home/dmiller89/webapps/django_test/challenge/challenge/wsgi.py'.
+[Wed May 13 00:42:15 2015] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Wed May 13 00:42:15 2015] [error] [client 127.0.0.1]   File "/home/dmiller89/webapps/django_test/lib/python2.7/django/core/handlers/wsgi.py", line 187, in __call__
+[Wed May 13 00:42:15 2015] [error] [client 127.0.0.1]     self.load_middleware()
+[Wed May 13 00:42:15 2015] [error] [client 127.0.0.1]   File "/home/dmiller89/webapps/django_test/lib/python2.7/django/core/handlers/base.py", line 44, in load_middleware
+[Wed May 13 00:42:15 2015] [error] [client 127.0.0.1]     for middleware_path in settings.MIDDLEWARE_CLASSES:
+[Wed May 13 00:42:15 2015] [error] [client 127.0.0.1]   File "/home/dmiller89/webapps/django_test/lib/python2.7/django/conf/__init__.py", line 54, in __getattr__
+[Wed May 13 00:42:15 2015] [error] [client 127.0.0.1]     self._setup(name)
+[Wed May 13 00:42:15 2015] [error] [client 127.0.0.1]   File "/home/dmiller89/webapps/django_test/lib/python2.7/django/conf/__init__.py", line 49, in _setup
+[Wed May 13 00:42:15 2015] [error] [client 127.0.0.1]     self._wrapped = Settings(settings_module)
+[Wed May 13 00:42:15 2015] [error] [client 127.0.0.1]   File "/home/dmiller89/webapps/django_test/lib/python2.7/django/conf/__init__.py", line 132, in __init__
+[Wed May 13 00:42:15 2015] [error] [client 127.0.0.1]     % (self.SETTINGS_MODULE, e)
+[Wed May 13 00:42:15 2015] [error] [client 127.0.0.1] ImportError: Could not import settings 'curbmetrics.settings' (Is it on sys.path? Is there an import error in the settings file?): No module named curbmetrics.settings
+[Wed May 13 00:42:16 2015] [error] [client 127.0.0.1] mod_wsgi (pid=31870): Exception occurred processing WSGI script '/home/dmiller89/webapps/django_test/challenge/challenge/wsgi.py'.
+[Wed May 13 00:42:16 2015] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Wed May 13 00:42:16 2015] [error] [client 127.0.0.1]   File "/home/dmiller89/webapps/django_test/lib/python2.7/django/core/handlers/wsgi.py", line 187, in __call__
+[Wed May 13 00:42:16 2015] [error] [client 127.0.0.1]     self.load_middleware()
+[Wed May 13 00:42:16 2015] [error] [client 127.0.0.1]   File "/home/dmiller89/webapps/django_test/lib/python2.7/django/core/handlers/base.py", line 44, in load_middleware
+[Wed May 13 00:42:16 2015] [error] [client 127.0.0.1]     for middleware_path in settings.MIDDLEWARE_CLASSES:
+[Wed May 13 00:42:16 2015] [error] [client 127.0.0.1]   File "/home/dmiller89/webapps/django_test/lib/python2.7/django/conf/__init__.py", line 54, in __getattr__
+[Wed May 13 00:42:16 2015] [error] [client 127.0.0.1]     self._setup(name)
+[Wed May 13 00:42:16 2015] [error] [client 127.0.0.1]   File "/home/dmiller89/webapps/django_test/lib/python2.7/django/conf/__init__.py", line 49, in _setup
+[Wed May 13 00:42:16 2015] [error] [client 127.0.0.1]     self._wrapped = Settings(settings_module)
+[Wed May 13 00:42:16 2015] [error] [client 127.0.0.1]   File "/home/dmiller89/webapps/django_test/lib/python2.7/django/conf/__init__.py", line 132, in __init__
+[Wed May 13 00:42:16 2015] [error] [client 127.0.0.1]     % (self.SETTINGS_MODULE, e)
+[Wed May 13 00:42:16 2015] [error] [client 127.0.0.1] ImportError: Could not import settings 'curbmetrics.settings' (Is it on sys.path? Is there an import error in the settings file?): No module named curbmetrics.settings

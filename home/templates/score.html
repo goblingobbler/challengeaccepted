@@ -1,0 +1,368 @@
+{% load thumbnail %}
+{% load home_extras %}
+
+<div class='row'>
+
+<style type="text/css" media="screen">
+
+.score * {
+	text-align: left;
+}
+.score {
+	background: white;
+}
+#map_canvas {
+	height: 800px;
+}
+
+body {
+	
+}
+
+.smallmap {
+	border: thin solid #ccc;
+	border-radius: 4px;
+}
+h1,h2 {
+	font-weight: normal;
+}
+
+.score-number, .score-number-primary {
+	display: inline-block;
+	border-radius: 10px;
+	font-size: 1.2em;
+}
+.score-number {
+	border: thin solid #ccc;
+	background: #eee;
+	padding: 5px;
+	margin: 5px;
+}
+
+.score-number {
+	display: none;
+}
+.score-number-primary {
+	font-size: 1.8em;
+	position: relative;
+	width:180px;
+}
+.score-number .number, .score-number-primary .number {
+	font-size: 2.5em;
+}
+
+.score-number-primary .number {
+	color:#002726;
+	position: absolute;
+  top: 0px;
+  text-align: center;
+  width: 100%;
+  padding-top: 45px;
+  font-weight: bold;
+}
+
+.canvasjs-chart-credit {
+	display: none;
+}
+
+.chart {
+	position: relative;
+	display:inline-block;
+}
+.chart .chartLogo {
+	display: -ms-flexbox;
+  -ms-flex-pack: center;
+  -ms-flex-align: center;
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  display: box;
+  box-pack: center;
+  box-align: center;
+  
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 96%;
+}
+
+.slick-initialized .slick-slide {
+	height: 500px;
+	position:relative;
+}
+
+.creatortext {
+	color: white;
+	display: inline-block;
+	background: rgba(0,0,0,.5);
+	padding: 5px;
+	
+	  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 11;
+}
+
+.score-details {
+	background: #24cccd;
+  display: inline-block;
+  color: white;
+  padding: 2px 20px;
+  font-weight: bold;
+  font-size: 14px;
+  position: relative;
+  z-index: 10;
+}
+.score-details .score-detail-arrow {
+	display: none;
+	  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 9px;
+  left: 25px;
+  background: #24cccd;
+  z-index: -1;
+  
+	-ms-transform: rotate(45deg); /* IE 9 */
+	-webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+	transform: rotate(45deg);
+
+}
+.score-details.open .score-detail-arrow {
+	display: block;
+}
+
+.score-details-cont {
+	height: 0px;
+	overflow: hidden;
+}
+.score-details:hover {
+	cursor: pointer;
+}
+
+.side_icons {
+  border-right: 2px solid #95a1a1;
+  text-align: right;
+  font-size: 22px;
+  height: 180px;
+ }
+.side_icons .fa {
+	border: 2px solid #95a1a1;
+  padding: 6px;
+  border-radius: 100px;
+  height: 38px;
+  width: 38px;
+  text-align: center;
+  margin: 4px 0px;
+  color: #95a1a1;
+}
+</style>
+
+
+<div class='score row col-xs-12' style='padding:0px;'>
+	<div class='col-xs-12' style='padding:0px;background:#dce2e2;'>
+		<div class='col-md-8 col-md-offset-2 col-xs-12'>
+			<div class='col-xs-12'><br><br></div>
+			
+			<div class='col-xs-1 side_icons'>
+				<div class='fa fa-envelope-o fa-2' style='border: none;font-size: 33px;padding: 0px;'></div>
+				<div class='fa fa-facebook fa-2'></div>
+				<div class='fa fa-twitter fa-2'></div>
+			</div>
+			
+			<div class='col-xs-3'>
+				<div class='col-xs-12'>
+					<div class='score-number-primary'>
+						<img src='{{ex_static}}/images/score.png' style='width:100%;' />
+						<div class='number'>{{test_address.finalscore|floatformat:0}}</div>
+					</div>
+				</div>
+				<!--<div class='col-xs-12'>
+					<div class='btn btn-primary' onclick='showScores(this)'>View Details</div></div>-->
+			</div>
+			<div class='col-xs-8'>
+				<div class='col-xs-12'>
+					<h1>{{address}}</h1>
+				</div>
+				<div class='col-xs-12'>
+					<h2>{{city}}</h2>
+				</div>
+				
+				<div class='col-xs-12' style='font-size:22px;'>{{test_address.score_title}}</div>
+				<div class='col-xs-12'>{{test_address.score_desc}}</div>
+				
+				<div class='col-xs-10 col-xs-offset-2'>
+					<br><br>
+					<div class='score-details' onclick='showScoreDetails()'>SCORE DETAILS<div class='score-detail-arrow'></div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class='col-xs-12 score-details-cont transitions' style='padding:0px;background:#f2f4f3;'>
+		<div class='row'>
+		<div class='col-xs-12'><br></div>
+		
+		<div class='col-md-8 col-md-offset-2 col-xs-12 transitions'>	
+			{% for metric in metric_list %}
+			
+			{% with test_address.scores|hash:metric as value %}
+			<div class='col-xs-3' style='text-align:center;{%if not forloop.last%}border-right:thin solid #b2b4b3;{%endif%}'>
+				<div class='chart' style="height: 200px; width: 200px;">
+					<div class='chartLogo'>
+						<img class='chartlogo transitions' src='{{ex_static}}images/{{value.type.image}}' 
+							style='width: 65px;border-radius: 10px;opacity:0;' />
+					</div>
+					<div id="chartContainer{{metric}}" class='chartContainer' style="height: 200px; width: 200px;"></div>
+					<div class='chartDetails'>
+						<input type='hidden' name='value' value='{{value.weighted}}' />
+						<input type='hidden' name='color' value='{{value.type.color}}' />
+					</div>
+				</div>
+				<h4 style='text-align:center;'>
+					<div style='border-bottom: thin solid black;padding-bottom: 10px;display:inline-block;'>{{metric}}</div>
+						</h4>
+				<h1 style='text-align:center;' >{{value.weighted}}</h1>
+			</div>
+			{% endwith %}
+			{% endfor %}
+		</div>
+		
+		<div class='col-xs-12'><br><br></div>
+		</div>
+	</div>
+	
+	<div class='col-xs-12' style='padding:0px;'>
+	<div class='slick'>
+	{% for row in test_address.restaurant_set.all %}
+	{% for image in row.data %}
+		<div class='item fancy'>
+		    <a class='center-image' href="{{image.url}}">
+		        <img src="{{image.url}}" alt="" onload="sizeSliderImage(this)" />
+		        <div class='creatortext'>{{image.creator}}</div>
+		    </a>
+		</div>
+	{% endfor %}
+	{% endfor %}
+	</div>
+	</div>
+	<script>
+		$('.slick').slick({
+	        /*infinite: true,
+	        dots: false,
+	        variableWidth: true,
+	        slidesToShow: 4,
+	        slidesToScroll: 2,*/
+	      });
+	</script>
+	
+	<div class='col-xs-12' style='padding:0px;'>
+		<div class="smallmap">
+			<div class='map_data lat' style='display:none;'>{{lat}}</div>
+			<div class='map_data lng' style='display:none;'>{{lng}}</div>
+			
+			<div id="map_canvas" class="map transitions" style='opacity:0;' ></div>
+		</div>
+		
+		<div class='col-xs-12'>
+			<div class='btn btn-default'>Embed this map on your site</div>
+		</div>
+	</div>
+	<script>
+		var res = [
+		{% for row in test_address.restaurant_set.all %}
+		{'lat':{{row.lat}},
+		'lng':{{row.lng}},
+		'title':'{{row.title}}',
+		'address':'{{row.address}}',
+		'image':'{{row.data.0.url}}'},
+		
+		{% endfor %}
+		]
+	</script>
+	
+	<div class='col-xs-12'>
+		<br><br><br>
+	</div>
+	
+</div>
+
+</div>
+
+
+<script>
+var charts = new Array();
+var max = 100;
+function createCharts(){
+	$('.chart').each(function(){
+		var id = $(this).children('.chartContainer').attr('id');
+		var value = $(this).find('input[name=value]').val();
+		var color = $(this).find('input[name=color]').val();
+		
+		console.log(value);
+		var chart = new CanvasJS.Chart(id, {
+			width:200, height:200,
+			interactivityEnabled: false,
+		 	backgroundColor: "#f2f4f3",
+		 	
+			data: [{
+			   type: "doughnut",
+			   startAngle:  -90,
+			   fillOpacity: value/100,
+			dataPoints: [
+			 { label: "", y: value, color: color,},
+			 
+			 { label: "", y: max-value, color: "white", },
+			     ]
+			   }]
+		});
+		charts.push(chart);
+		
+	});
+}
+
+function renderCharts(){
+	for (var i = 0; i < charts.length; i++){
+		charts[i].render();
+	}
+	$('.chartlogo').css('opacity',1);
+}
+    
+	
+function showScores(thisObj){
+	$('.score-number').css('display','inline-block');
+	
+	$(thisObj).parent().height($(thisObj).parent().height());
+	setTimeout(function(){
+		$(thisObj).parent().height(0);
+	},10);
+	
+	$(thisObj).hide();
+	
+	setTimeout(function(){
+		$('.score-number').parent().parent().height($('.score-number').parent().height());
+	},10);
+	
+}
+
+function showScoreDetails(){
+	if ($('.score-details').hasClass('open')){
+		$('.score-details-cont').height(0);
+		$('.score-details').removeClass('open');
+	}
+	else {
+		$('.score-details-cont').height($('.score-details-cont').children().first().height());
+		$('.score-details').addClass('open');
+		
+		renderCharts();
+	}
+}
+
+</script>
+
+
+

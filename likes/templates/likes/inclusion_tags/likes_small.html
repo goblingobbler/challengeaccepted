@@ -1,0 +1,23 @@
+{% load i18n %}
+
+{% if import_js %}
+    <script type="text/javascript" src="{{ STATIC_URL }}likes/includes/likes.js"></script>
+{% endif %}
+
+{% if likes_enabled %}
+    <div class="side_likes" style='margin:4px;position:absolute;top:0px;left:0px;'>
+        {% if can_vote %}
+            <a class="side_like liker" href="{% url "like" content_type content_obj.id 1 %}" rel="nofollow">{% trans "LOL" %}</a><br>
+          
+            <div style='display:inline-block;padding:4px 10px;'>{{ content_obj.vote_total }}</div><br>
+
+            <a class="side_like liker" href="{% url "like" content_type content_obj.id -1 %}" rel="nofollow">{% trans "Booo" %}</a>
+        {% else %}
+            <a class="side_like liker" rel="nofollow" style='color:#bbb;'>{% trans "LOL" %}</a><br>
+              
+            <div style='display:inline-block;padding:4px 10px;'>{{ content_obj.vote_total }}</div><br>
+
+            <a class="side_like liker" rel="nofollow" style='color:#bbb;'>{% trans "Booo" %}</a>
+        {% endif %}
+    </div>
+{% endif %}

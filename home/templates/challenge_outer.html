@@ -1,0 +1,59 @@
+{% extends "skeleton.html" %}
+{% load thumbnail %}
+
+{% block style %}
+<style type="text/css" media="screen">
+
+* {
+	text-align: center;
+}
+
+input {
+	text-align:left;
+}
+
+</style>
+{% endblock %}
+
+{% block content %}
+
+{% include 'header.html' %}
+<div class='container' style='padding-top:76px;'>
+
+<div class='row'>	
+	<div class='col-md-6 col-md-offset-3 col-xs-12' style='padding:10px;background:#ddd;border:thin solid #ccc;'>
+	{% include "edit_form.html" %}
+	</div>
+</div>
+
+<div class='row challenge_container transitions' style=''>
+	{% include "challenge_inner.html" with objs=objs %}
+</div>
+
+
+<footer class='row'>
+	<div class='col-xs-12'><div class='footer_links'></div></div>
+	
+	<div class='col-xs-4 col-xs-offset-4 social_icons'>
+		<div class='col-xs-4'><div class='fa fa-twitter fa-2'></div></div>
+		<div class='col-xs-4'><div class='fa fa-facebook fa-2'></div></div>
+		<div class='col-xs-4'><div class='fa fa-google-plus fa-2'></div></div>
+	</div>
+</footer>
+
+</div>
+
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+var CSRF = '{{ csrf_token }}';
+
+$(document).ready(function(){
+
+});
+
+</script>
+{% endblock %}
+

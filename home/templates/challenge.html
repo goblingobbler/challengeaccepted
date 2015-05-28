@@ -1,0 +1,70 @@
+{% extends "skeleton.html" %}
+{% load likes_inclusion_tags %}
+{% load thumbnail %}
+
+{% block style %}
+<style type="text/css" media="screen">
+
+* {
+	text-align: center;
+}
+
+input {
+	text-align:left;
+}
+
+</style>
+{% endblock %}
+
+{% block content %}
+
+{% include 'header.html' %}
+<div class='container' style='padding-top:76px;'>
+
+	<div class='col-xs-12' style='border:thin solid #ccc;padding:0px;margin:10px 0px;'>
+	<div class='col-md-4 col-xs-12' style='background:#ddd;padding:10px;margin:0px;'>
+		<h1>{{row.title}}</h1>
+		<h3>{{row.desc}}</h3>
+		
+	</div>
+	<div class='col-md-8 col-xs-12'>
+		{% likes row %}
+
+		{% include "comment_form.html" with challenge=row %}
+		
+	</div>
+
+	<div class='col-xs-12'>
+		<h3 style='text-align:left;'>Responses</h3>
+
+		{% for comment in row.comments_set.all %}
+			<div class='comment row'style='background:#ddd;border:thin solid #ccc;padding:10px;padding-left:40px;position:relative;min-height:76px;'>
+				{% likes_small comment %}
+
+				{% if comment.link != '' %}<div class='col-xs-6' style='overflow:hidden;'><iframe title="YouTube video player" class="youtube-player" type="text/html" 
+					width="540" height="340" src="{{ comment.link}}" frameborder="0" allowFullScreen></iframe></div>
+				{%endif%}
+				<div class='col-xs-6'>
+					{{comment.desc}}
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+
+	</div>
+
+</div>
+
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+var CSRF = '{{ csrf_token }}';
+
+$(document).ready(function(){
+
+});
+
+</script>
+{% endblock %}
